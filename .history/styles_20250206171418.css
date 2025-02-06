@@ -1,0 +1,397 @@
+/* Image controls */
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    margin: 2rem auto;
+    display: block;
+}
+
+
+/* Base styles */
+
+:root {
+    --primary: #800000;
+    /* Maroon */
+    --primary-hover: #990000;
+    /* Slightly lighter maroon */
+    --accent: #DAA520;
+    /* Gold */
+    --accent-hover: #B8860B;
+    /* Darker gold */
+    --background-color: #FFFFFF;
+    --card-background-color: #F8F8F8;
+    --text-color: #333333;
+    --border-color: rgba(128, 0, 0, 0.2);
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+
+/* Navigation */
+
+nav a:hover {
+    color: var(--primary-hover);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+nav a[role="button"]:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+
+/* Toggle buttons */
+
+.section-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+
+/* Education section */
+
+.education {
+    margin: 2rem 0;
+}
+
+.school-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.school-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-section {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.education-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1.5rem 0 1rem;
+    color: var(--primary);
+}
+
+.education-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--card-background-color);
+    margin: 1rem 0;
+}
+
+.education-item .date {
+    color: var(--primary-hover);
+    font-size: 0.9rem;
+}
+
+
+/* Detailed Skills section */
+
+.detailed-skills {
+    margin: 2rem 0;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--card-background-color);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-header img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    transition: transform 0.3s ease;
+}
+
+.skill-header img:hover {
+    transform: scale(1.2);
+}
+
+.skill-header h4 {
+    margin: 0;
+}
+
+.proficiency {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+
+/* Project cards */
+
+.project-card {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(145deg, var(--background-color), var(--card-background-color));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: var(--primary-hover);
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Contact section */
+
+.contact {
+    margin: 2rem 0;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: var(--primary-hover);
+}
+
+.contact button {
+    transition: all 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+
+/* Footer links */
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-hover);
+}
+
+
+/* Contact details */
+
+.contact-cards-container {
+    overflow-x: auto;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.contact-cards {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    scroll-snap-align: start;
+}
+
+.contact-card {
+    flex: 0 0 300px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--background-color), var(--card-background-color));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    scroll-snap-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-links-container {
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 15px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.social-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Project hover effects */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card a {
+    position: relative;
+    z-index: 2;
+}
+
+.project-card::after {
+    content: "View Project";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba(124, 58, 237, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    opacity: 1;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oliver Orano - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><img src="school-logo.png" alt="School Logo" class="logo"></li>
+        </ul>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills" onclick="toggleSection('skills'); return false;">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" role="button">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="about">
+            <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic">
+            <hgroup>
+                <h2>Oliver Orano</h2>
+                <h3>Aspiring Software Developer</h3>
+            </hgroup>
+            <p>Passionate about coding and constantly learning new technologies. Seeking opportunities to build innovative software solutions.</p>
+
+            <div class="section-toggle">
+                <button onclick="toggleSection('education')" class="toggle-btn">Education</button>
+                <button onclick="toggleSection('skills')" class="toggle-btn">Technical Skills</button>
+            </div>
+
+            <div id="education" class="education toggle-section">
+                <div class="education-item">
+                    <h4>College (Tertiary)</h4>
+                    <div class="school-info">
+                        <img src="https://mcm.edu.ph/wp-content/uploads/2019/10/mcm-logo.png" alt="MCM Logo" class="school-logo">
+                        <div>
+                            <p><a href="https://mcm.edu.ph/" target="_blank">Malayan Colleges of Mindanao</a></p>
+                            <p class="date">2023 - Present</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-header">High School Education</div>
+                <div class="education-item">
+                    <h4>Senior High School</h4>
+                    <div class="school-info">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Ateneo_de_Davao_University_seal.svg/800px-Ateneo_de_Davao_University_seal.svg.png" alt="ADDU Logo" class="school-logo">
+                        <div>
+                            <p><a href="https://www.addu.edu.ph/" target="_blank">Ateneo de Davao University</a></p>
+                            <p class="date">2018 - 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <h4>Junior High School</h4>
+                    <p><a href="https://www.facebook.com/DepEdTayoDCNHS/" target="_blank">Digos City National High School</a></p>
+                    <p class="date">2013 - 2017</p>
+                </div>
+            </div>
+
+            <div id="skills" class="detailed-skills toggle-section" style="display: none;">
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/javascript.svg" alt="JavaScript">
+                            </a>
+                            <h4>JavaScript</h4>
+                            <span class="proficiency">Intermediate</span>
+                        </div>
+                        <p>Frontend development with React, Node.js backend experience</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://docs.python.org/3/" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg" alt="Python">
+                            </a>
+                            <h4>Python</h4>
+                            <span class="proficiency">Advanced</span>
+                        </div>
+                        <p>Data analysis, automation scripts, and web development with Django</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://docs.oracle.com/en/java/" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/java.svg" alt="Java">
+                            </a>
+                            <h4>Java</h4>
+                            <span class="proficiency">Intermediate</span>
+                        </div>
+                        <p>Object-oriented programming, Android app development</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://cplusplus.com/doc/" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/cplusplus.svg" alt="C++">
+                            </a>
+                            <h4>C++</h4>
+                            <span class="proficiency">Intermediate</span>
+                        </div>
+                        <p>Systems programming, data structures implementation</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/csharp.svg" alt="C#">
+                            </a>
+                            <h4>C#</h4>
+                            <span class="proficiency">Intermediate</span>
+                        </div>
+                        <p>.NET development, Windows applications</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/css3.svg" alt="CSS">
+                            </a>
+                            <h4>CSS</h4>
+                            <span class="proficiency">Intermediate</span>
+                        </div>
+                        <p>Responsive design, animations, modern layouts</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/html5.svg" alt="HTML">
+                            </a>
+                            <h4>HTML</h4>
+                            <span class="proficiency">Advanced</span>
+                        </div>
+                        <p>Semantic markup, accessibility, SEO optimization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#">GitHub Repo</a> | <a href="#">Live Demo</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#">GitHub Repo</a> | <a href="#">Live Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Details</h2>
+            <div class="contact-cards-container">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <h4>Email</h4>
+                        <p><a href="mailto:oliverorano141@gmail.com">oliverorano141@gmail.com</a></p>
+                        <p><a href="mailto:oorano@mcm.edu.ph">oorano@mcm.edu.ph</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Phone</h4>
+                        <p>Mobile: +63 995 906 7737</p>
+                        <p>Landline: (082) 237-0768</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Location</h4>
+                        <p><a href="https://www.google.com/maps?q=6.7495,125.3557" target="_blank">Digos City, Davao del Sur</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links-container">
+                <div class="social-links">
+                    <a href="#" class="social-btn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub">GitHub</a>
+                    <a href="#" class="social-btn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/facebook.svg" alt="Facebook">Facebook</a>
+                    <a href="#" class="social-btn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/instagram.svg" alt="Instagram">Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <small>
+            <a href="resume.pdf" target="_blank">Download Resume</a> • 
+            <a href="#">LinkedIn</a> • 
+            <a href="#">GitHub</a>
+        </small>
+    </footer>
+</body>
+
+</html>
